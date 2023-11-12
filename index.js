@@ -14,9 +14,9 @@ const createApp = () => {
     "package.json",
     `{
   "name": "me-app",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "1.0.2",
+  "description": "Mongoose + Express app created with create-me-app-js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \\"Error: no test specified\\" && exit 1",
     "start": "nodemon server.js"
