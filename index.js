@@ -13,8 +13,8 @@ const createApp = () => {
   fs.writeFileSync(
     "package.json",
     `{
-  "name": "me-app",
-  "version": "1.0.2",
+  "name": \\${projectName}\\,
+  "version": "1.0.3",
   "description": "Mongoose + Express app created with create-me-app-js",
   "main": "server.js",
   "scripts": {
@@ -27,7 +27,8 @@ const createApp = () => {
   "dependencies": {
     "express": "^4.18.2",
     "mongoose": "^8.0.0",
-    "nodemon": "^3.0.1"
+    "nodemon": "^3.0.1",
+    "dotenv": "^16.3.1",
   }
 }
 `
@@ -39,23 +40,29 @@ const createApp = () => {
     `const express = require('express');
      const mongoose = require('mongoose');
    const app = express();
+   app.use(express.json());
 //add connection string and port in an .env file
 const port = process.env.port || 3000; 
 const connectionString = process.env.connectionString;
 
 mongoose.connect(connectionString).then(() => {
-  app.listen(port, () => {
-    console.log(\`Server is running on port \${port}\`);
+  app.listen(${port}, () => {
+    console.log(\`Server is running on port ${port}\`);
   });
 });
 `
   );
-
+  fs.writeFileSync(
+    ".env",
+    `connectionString = ;
+  port = ;`
+  );
   // Inform the user
   console.log(`\n${projectName} created successfully!\n`);
   console.log(
     `To start your app, run:\n\n  cd ${projectName} && npm install && npm start\n`
   );
+
 };
 
 if (fs.existsSync(projectPath)) {
