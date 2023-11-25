@@ -13,7 +13,7 @@ const createApp = () => {
   fs.writeFileSync(
     "package.json",
     `{
-  "name": \\${projectName}\\,
+  "name": ${projectName},
   "version": "1.0.3",
   "description": "Mongoose + Express app created with create-me-app-js",
   "main": "server.js",
@@ -39,8 +39,9 @@ const createApp = () => {
     "server.js",
     `const express = require('express');
      const mongoose = require('mongoose');
-   const app = express();
-   app.use(express.json());
+     const app = express();
+     app.use(express.json());
+   require('dotenv').config();
 //add connection string and port in an .env file
 const port = process.env.port || 3000; 
 const connectionString = process.env.connectionString;
