@@ -1,6 +1,6 @@
 {
   "name": "create-me-app-js",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Generate an Express app with mongoose",
   "main": "index.js",
   "scripts": {
