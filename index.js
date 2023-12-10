@@ -14,7 +14,7 @@ const createApp = () => {
     "package.json",
     `{
   "name": ${projectName},
-  "version": "1.0.3",
+  "version": "1.0.0",
   "description": "Mongoose + Express app created with create-me-app-js",
   "main": "server.js",
   "scripts": {
@@ -25,10 +25,12 @@ const createApp = () => {
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2",
-    "mongoose": "^8.0.0",
-    "nodemon": "^3.0.1",
+    "bcrypt": "^5.1.1",
     "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.0.0",
+    "nodemon": "^3.0.1"
   }
 }
 `
