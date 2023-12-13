@@ -13,9 +13,9 @@ const createApp = () => {
   fs.writeFileSync(
     "package.json",
     `{
-  "name": ${projectName},
-  "version": "1.0.0",
-  "description": "Mongoose + Express app created with create-me-app-js",
+  "name": "${projectName}",
+  "version": "1.0.2",
+  "description": "Mongoose + Express app created with create-me-app-dip",
   "main": "server.js",
   "scripts": {
     "test": "echo \\"Error: no test specified\\" && exit 1",
@@ -49,8 +49,8 @@ const port = process.env.port || 3000;
 const connectionString = process.env.connectionString;
 
 mongoose.connect(connectionString).then(() => {
-  app.listen(${port}, () => {
-    console.log(\`Server is running on port ${port}\`);
+  app.listen(port, () => {
+    console.log(\`Server is running\`);
   });
 });
 `

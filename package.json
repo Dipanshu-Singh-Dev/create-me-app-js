@@ -1,17 +1,17 @@
 {
-  "name": "create-me-app-js",
-  "version": "1.0.0",
+  "name": "create-me-app-dip",
+  "version": "1.0.2",
   "description": "Generate an Express app with mongoose",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "create-me-app-js": "./index.js"
+    "create-me-app-dip": "./index.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Dipanshu-Singh-Dev/create-me-app-js"
+    "url": "https://github.com/Dipanshu-Singh-Dev/create-me-app-dip"
   },
   "keywords": [
     "mongoose",
